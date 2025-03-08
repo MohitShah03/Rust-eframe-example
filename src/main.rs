@@ -24,7 +24,7 @@ impl eframe::App for PointerApp {
             ui.painter().text(
                 self.pointer_pos + egui::Vec2::new(10.0, 10.0), // Offset near pointer
                 Align2::LEFT_TOP,
-                "(❁´◡`❁)",
+                "☆*: .｡. o(≧▽≦)o .｡.:*☆",
                 FontId::monospace(16.0),
                 Color32::WHITE,
             );
