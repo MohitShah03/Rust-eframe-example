@@ -12,6 +12,21 @@ impl Default for PointerApp {
     }
 }
 
+/// Implementation of the `eframe::App` trait for the `PointerApp` struct.
+///
+/// This implementation updates the application state and renders the UI.
+///
+/// # Methods
+///
+/// - `update(&mut self, ctx: &Context, _frame: &mut eframe::Frame)`: This method is called to update the application state.
+///   - It captures the latest pointer position and updates `self.pointer_pos`.
+///   - It then renders a text near the pointer position using `egui::CentralPanel`.
+///   - Finally, it requests a repaint to keep the app running continuously.
+///
+/// # Parameters
+///
+/// - `ctx`: A reference to the `Context` which provides input and rendering capabilities.
+/// - `_frame`: A mutable reference to the `eframe::Frame`, which is not used in this implementation.
 impl eframe::App for PointerApp {
     fn update(&mut self, ctx: &Context, _frame: &mut eframe::Frame) {
         ctx.input(|i| {
