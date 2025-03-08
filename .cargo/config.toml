@@ -1,0 +1,2 @@
+[alias]
+launch = "run --release"
